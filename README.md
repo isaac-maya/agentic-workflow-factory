@@ -1,14 +1,23 @@
 # Varicent Agentic Workflow Factory
 
+🌐 **Live demo:** _coming soon — deploys to Hugging Face Spaces in Wave 2 rollout_
+
 A compact local workflow factory for SaaS operations. Workflows are declared in YAML, guardrails are a policy registry the runner actually enforces, and the monitoring report tracks which guardrails are doing work across the event stream. The pattern is meant to make prototypes safe to graduate — not to simulate production scale.
 
 ## Run
 
+**Interactive (Streamlit) — recommended:**
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+Pick a workflow, build an event with the toggles/sliders, hit Run and watch the pipeline execute step-by-step with guardrails firing. Visit the Monitoring tab after a few runs to see the guardrail-effectiveness view.
+
+**CLI batch run:**
 ```bash
 python3 workflow_factory.py
 ```
-
-The command refreshes `monitoring_report.md`.
+Refreshes `monitoring_report.md` against the 8-event sample dataset.
 
 ## What It Demonstrates In 30 Seconds
 
