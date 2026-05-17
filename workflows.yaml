@@ -1,0 +1,34 @@
+workflows:
+  - id: escalation_routing
+    trigger: "support_ticket.severity_high"
+    owner: "SaaS Operations"
+    steps:
+      - classify_ticket
+      - retrieve_customer_context
+      - route_to_owner
+      - draft_status_update
+    guardrails:
+      - require_customer_context
+      - block_customer_message_without_review
+  - id: anomaly_flagging
+    trigger: "metric.revenue_variance"
+    owner: "Revenue Operations"
+    steps:
+      - compare_baseline
+      - identify_impacted_accounts
+      - create_investigation_task
+      - notify_ops_channel
+    guardrails:
+      - require_variance_threshold
+      - block_financial_adjustment
+  - id: backlog_triage
+    trigger: "backlog.daily_review"
+    owner: "Product Operations"
+    steps:
+      - cluster_requests
+      - detect_duplicates
+      - assign_priority
+      - prepare_triage_summary
+    guardrails:
+      - require_human_priority_review
+      - block_auto_close

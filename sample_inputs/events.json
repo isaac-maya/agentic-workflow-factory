@@ -1,0 +1,10 @@
+[
+  {"event_id": "evt-001", "workflow_id": "escalation_routing", "severity": "high", "customer_context": true, "unsafe_action_requested": false},
+  {"event_id": "evt-002", "workflow_id": "escalation_routing", "severity": "high", "customer_context": false, "unsafe_action_requested": false},
+  {"event_id": "evt-003", "workflow_id": "escalation_routing", "severity": "high", "customer_context": true, "unsafe_action_requested": true},
+  {"event_id": "evt-004", "workflow_id": "anomaly_flagging", "variance_pct": 18.4, "impacted_accounts": 12, "unsafe_action_requested": false},
+  {"event_id": "evt-005", "workflow_id": "anomaly_flagging", "variance_pct": 22.1, "impacted_accounts": 8, "unsafe_action_requested": true},
+  {"event_id": "evt-006", "workflow_id": "anomaly_flagging", "variance_pct": 3.2, "impacted_accounts": 41, "unsafe_action_requested": false},
+  {"event_id": "evt-007", "workflow_id": "backlog_triage", "items": 47, "duplicates": 9, "auto_close_requested": false},
+  {"event_id": "evt-008", "workflow_id": "backlog_triage", "items": 12, "duplicates": 2, "auto_close_requested": true}
+]
